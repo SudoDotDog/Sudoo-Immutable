@@ -4,7 +4,7 @@
  * @description Medium
  */
 
-import { barbaricDuplicate, duplicate } from "@sudoo/duplicate";
+import { duplicate } from "@sudoo/duplicate";
 import { DraftFunction } from "./declare";
 
 export class Medium<T> {
@@ -24,12 +24,6 @@ export class Medium<T> {
     public get original(): T {
 
         return this._target;
-    }
-
-    public barbaric(): T {
-
-        const clone: T = barbaricDuplicate(this.original);
-        return clone;
     }
 
     public clone(): T {
