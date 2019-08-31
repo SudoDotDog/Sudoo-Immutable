@@ -5,6 +5,7 @@
  */
 
 import { barbaricDuplicate, duplicate } from "@sudoo/duplicate";
+import { DraftFunction } from "./declare";
 
 export class Medium<T> {
 
@@ -34,6 +35,18 @@ export class Medium<T> {
     public clone(): T {
 
         const clone: T = duplicate(this.original);
+        return clone;
+    }
+
+    public mutate(func: DraftFunction<T>): T {
+
+        const clone: T = this.clone();
+        const result: T | undefined = func(clone);
+
+        if (result !== undefined) {
+            return result;
+        }
+
         return clone;
     }
 }
