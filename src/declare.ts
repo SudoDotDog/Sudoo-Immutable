@@ -4,4 +4,4 @@
  * @description Declare
  */
 
-export type DraftFunction<T> = (draft: T) => T | undefined;
+export type DraftFunction<T> = ((draft: T) => void) | ((draft: T) => T);

@@ -22,4 +22,23 @@ describe('Given {Medium} Class', (): void => {
         expect(medium).to.be.instanceOf(Medium);
         expect(medium.original).to.be.equal(target);
     });
+
+    it('should be able to mutate with void function', (): void => {
+
+        const oldValue: string = chance.string();
+        const newValue: string = chance.string();
+
+        const target = {
+            a: oldValue,
+        };
+
+        const medium = Medium.from(target);
+
+        const result = medium.mutate((draft) => {
+            draft.a = newValue;
+        });
+
+        expect(target.a).to.be.equal(oldValue);
+        expect(result.a).to.be.equal(newValue);
+    });
 });

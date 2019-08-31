@@ -41,10 +41,10 @@ export class Medium<T> {
     public mutate(func: DraftFunction<T>): T {
 
         const clone: T = this.clone();
-        const result: T | undefined = func(clone);
+        const result: T | void = func(clone);
 
         if (result !== undefined) {
-            return result;
+            return result as T;
         }
 
         return clone;
