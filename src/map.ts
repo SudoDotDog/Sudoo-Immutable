@@ -4,6 +4,9 @@
  * @description Map
  */
 
+import { DraftFunction } from "./declare";
+import { Medium } from "./medium";
+
 export class FrozenMap<K extends string, V extends any> {
 
     public static from<K extends string, V extends any>(map: Record<K, V>) {
@@ -45,5 +48,11 @@ export class FrozenMap<K extends string, V extends any> {
             result.push(key);
         }
         return result;
+    }
+
+    public mutate(func: DraftFunction<Record<K, V>>): Record<K, V> {
+
+        const medium: Medium<Record<K, V>> = Medium.from(this.original);
+        return medium.mutate(func);
     }
 }

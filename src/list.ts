@@ -4,6 +4,9 @@
  * @description List
  */
 
+import { DraftFunction } from "./declare";
+import { Medium } from "./medium";
+
 export class FrozenList<E extends any> {
 
     public static from<E extends any>(list: E[]) {
@@ -35,5 +38,11 @@ export class FrozenList<E extends any> {
         }
 
         return undefined;
+    }
+
+    public mutate(func: DraftFunction<E[]>): E[] {
+
+        const medium: Medium<E[]> = Medium.from(this.original);
+        return medium.mutate(func);
     }
 }
