@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/immutable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": ":closed_lock_with_key: Immutable for Typescript",
   "main": "index.js",
   "directories": {
