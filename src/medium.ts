@@ -14,6 +14,11 @@ export class Medium<T> {
         return new Medium<T>(target);
     }
 
+    public static clone<T>(target: T): T {
+
+        return this.from(target).clone();
+    }
+
     private readonly _target: T;
 
     private constructor(target: T) {

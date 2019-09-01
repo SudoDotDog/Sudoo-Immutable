@@ -40,6 +40,11 @@ export class FrozenList<E extends any> {
         return undefined;
     }
 
+    public clone(): E[] {
+
+        return Medium.clone<E[]>(this.original);
+    }
+
     public mutate(func: DraftFunction<E[]>): E[] {
 
         const medium: Medium<E[]> = Medium.from(this.original);

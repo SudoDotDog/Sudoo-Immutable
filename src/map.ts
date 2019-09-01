@@ -50,6 +50,11 @@ export class FrozenMap<K extends string, V extends any> {
         return result;
     }
 
+    public clone(): Record<K, V> {
+
+        return Medium.clone<Record<K, V>>(this.original);
+    }
+
     public mutate(func: DraftFunction<Record<K, V>>): Record<K, V> {
 
         const medium: Medium<Record<K, V>> = Medium.from(this.original);
