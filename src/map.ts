@@ -22,4 +22,13 @@ export class FrozenMap<K extends string, V extends any> {
 
         return this._original;
     }
+
+    public get(key: K): V {
+
+        if (this.original[key]) {
+            return this.original[key];
+        }
+
+        return undefined;
+    }
 }

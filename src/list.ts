@@ -22,4 +22,13 @@ export class FrozenList<E extends any> {
 
         return this._original;
     }
+
+    public get(index: number): E | undefined {
+
+        if (this.original[index]) {
+            return this.original[index];
+        }
+
+        return undefined;
+    }
 }
