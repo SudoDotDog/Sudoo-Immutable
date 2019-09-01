@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/immutable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": ":closed_lock_with_key: Immutable for Typescript",
   "main": "index.js",
   "directories": {
@@ -16,10 +16,6 @@
     "url": "https://github.com/SudoDotDog/Sudoo-Immutable/issues"
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Immutable#readme",
-  "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
-  },
   "dependencies": {
     "@sudoo/duplicate": "^1.0.1"
   },

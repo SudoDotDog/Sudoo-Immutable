@@ -12,3 +12,8 @@ export const produce = <T extends any>(target: T, func: DraftFunction<T>): T => 
     const medium: Medium<T> = Medium.from<T>(target);
     return medium.mutate(func);
 };
+
+export const clone = <T extends any>(target: T): T => {
+
+    return Medium.clone<T>(target);
+};
