@@ -40,11 +40,22 @@ export class FrozenList<E extends any> {
         return undefined;
     }
 
-    public rebuild(func: (element: E, removeSymbol: symbol) => E[] | null): E[] {
+    public rebuild(func: (element: E, removeSymbol: symbol) => E[] | symbol): E[] {
 
-        for (const element of this._original) {
+        const build: E[] = [];
+        const removeSymbol: unique symbol = Symbol('remove');
+        loop: for (const element of this._original) {
 
+            const result: E[] | symbol = func(element, removeSymbol);
+            if (result === removeSymbol) {
+                continue loop;
+            }
+            if (!Array.isArray(result)) {
+                continue loop;
+            }
+            build.push(...result);
         }
+        return build;
     }
 
     public clone(): E[] {
