@@ -23,6 +23,11 @@ export class FrozenMap<K extends string, V extends any> {
         return this._original;
     }
 
+    public get length(): number {
+
+        return this.keys().length;
+    }
+
     public get(key: K): V {
 
         if (this.original[key]) {
@@ -30,5 +35,15 @@ export class FrozenMap<K extends string, V extends any> {
         }
 
         return undefined;
+    }
+
+    public keys(): K[] {
+
+        const result: K[] = [];
+        // tslint:disable-next-line: forin
+        for (const key in this.original) {
+            result.push(key);
+        }
+        return result;
     }
 }

@@ -23,6 +23,11 @@ export class FrozenList<E extends any> {
         return this._original;
     }
 
+    public get length(): number {
+
+        return this.original.length;
+    }
+
     public get(index: number): E | undefined {
 
         if (this.original[index]) {
