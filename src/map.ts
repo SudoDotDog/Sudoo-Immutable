@@ -33,8 +33,8 @@ export class FrozenMap<K extends string, V extends any> {
 
     public get(key: K): V | undefined {
 
-        if (this.original[key]) {
-            return this.original[key];
+        if (this._original[key]) {
+            return this._original[key];
         }
 
         return undefined;
@@ -44,7 +44,7 @@ export class FrozenMap<K extends string, V extends any> {
 
         const result: K[] = [];
         // tslint:disable-next-line: forin
-        for (const key in this.original) {
+        for (const key in this._original) {
             result.push(key);
         }
         return result;
@@ -60,12 +60,12 @@ export class FrozenMap<K extends string, V extends any> {
 
     public clone(): Record<K, V> {
 
-        return Medium.clone<Record<K, V>>(this.original);
+        return Medium.clone<Record<K, V>>(this._original);
     }
 
     public mutate(func: DraftFunction<Record<K, V>>): Record<K, V> {
 
-        const medium: Medium<Record<K, V>> = Medium.from(this.original);
+        const medium: Medium<Record<K, V>> = Medium.from(this._original);
         return medium.mutate(func);
     }
 }

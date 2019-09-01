@@ -28,26 +28,33 @@ export class FrozenList<E extends any> {
 
     public get length(): number {
 
-        return this.original.length;
+        return this._original.length;
     }
 
     public get(index: number): E | undefined {
 
-        if (this.original[index]) {
-            return this.original[index];
+        if (this._original[index]) {
+            return this._original[index];
         }
 
         return undefined;
     }
 
+    public rebuild(func: (element: E, removeSymbol: symbol) => E[] | null): E[] {
+
+        for (const element of this._original) {
+
+        }
+    }
+
     public clone(): E[] {
 
-        return Medium.clone<E[]>(this.original);
+        return Medium.clone<E[]>(this._original);
     }
 
     public mutate(func: DraftFunction<E[]>): E[] {
 
-        const medium: Medium<E[]> = Medium.from(this.original);
+        const medium: Medium<E[]> = Medium.from(this._original);
         return medium.mutate(func);
     }
 }
