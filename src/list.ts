@@ -63,9 +63,13 @@ export class FrozenList<E extends any> {
         return Medium.clone<E[]>(this._original);
     }
 
+    public medium(): Medium<E[]> {
+
+        return Medium.from<E[]>(this._original);
+    }
+
     public mutate(func: DraftFunction<E[]>): E[] {
 
-        const medium: Medium<E[]> = Medium.from(this._original);
-        return medium.mutate(func);
+        return this.medium().mutate(func);
     }
 }
