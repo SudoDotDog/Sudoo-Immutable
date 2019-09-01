@@ -5,3 +5,9 @@
  */
 
 export type DraftFunction<T> = ((draft: T) => void) | ((draft: T) => T);
+
+export type ObjectEntry<K extends string, V extends any> = {
+
+    readonly key: K;
+    readonly value: V;
+};

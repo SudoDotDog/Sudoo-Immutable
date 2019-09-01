@@ -4,7 +4,7 @@
  * @description Map
  */
 
-import { DraftFunction } from "./declare";
+import { DraftFunction, ObjectEntry } from "./declare";
 import { Medium } from "./medium";
 
 export class FrozenMap<K extends string, V extends any> {
@@ -48,6 +48,14 @@ export class FrozenMap<K extends string, V extends any> {
             result.push(key);
         }
         return result;
+    }
+
+    public entries(): Array<ObjectEntry<K, V>> {
+
+        return this.keys().map((key: K) => ({
+            key,
+            value: this._original[key],
+        }));
     }
 
     public clone(): Record<K, V> {
