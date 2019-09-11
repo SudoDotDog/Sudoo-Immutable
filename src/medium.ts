@@ -5,7 +5,7 @@
  */
 
 import { duplicate } from "@sudoo/duplicate";
-import { DraftFunction } from "./declare";
+import { AsyncDraftFunction, DraftFunction } from "./declare";
 
 export class Medium<T> {
 
@@ -41,6 +41,18 @@ export class Medium<T> {
 
         const clone: T = this.clone();
         const result: T | void = func(clone);
+
+        if (result !== undefined) {
+            return result as T;
+        }
+
+        return clone;
+    }
+
+    public async asyncMutate(func: AsyncDraftFunction<T>): Promise<T> {
+
+        const clone: T = this.clone();
+        const result: T | void = await Promise.resolve(func(clone));
 
         if (result !== undefined) {
             return result as T;
