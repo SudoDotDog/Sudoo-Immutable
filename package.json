@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/immutable",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": ":closed_lock_with_key: Immutable for Typescript",
   "main": "index.js",
   "directories": {
@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Immutable#readme",
   "dependencies": {
-    "@sudoo/duplicate": "^1.0.5"
+    "@sudoo/duplicate": "^1.0.7"
   },
   "devDependencies": {
     "@sudoo/io": "^1.6.1",
     "@sudoo/mock": "^1.2.0",
-    "@sudoo/triforce": "^1.9.0"
+    "@sudoo/triforce": "^2.0.3"
   }
 }
