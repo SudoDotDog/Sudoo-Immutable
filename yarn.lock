@@ -23,10 +23,10 @@
   resolved "https://registry.yarnpkg.com/@sudoo/bark/-/bark-2.7.1.tgz#84b9db0be3aa7b4d6896ced81d9fa9aac96578ef"
   integrity sha512-0zBFbIQAtu3XNJkFPszdljYXXIPXzR63qypfTwFRupmu3gxgfBMtdPShbQebGuGG0KQEmXasGMBQVi2O0jWbbQ==
 
-"@sudoo/duplicate@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@sudoo/duplicate/-/duplicate-1.0.7.tgz#a6cbe7376433541a5a073b77e1b5f582c9fcf98f"
-  integrity sha512-dvlQc28MBTRwG4c0zbjmo5/Q2eX4xljtRe/8JeMCYkx70mJzvdVTg2+UlVLjo+Nx5esvWaPJLZsoyt9n8t8YLA==
+"@sudoo/duplicate@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@sudoo/duplicate/-/duplicate-1.0.8.tgz#fdddad0bcfa6c88415bc308dc8a38b1db69666b2"
+  integrity sha512-f+oQw0QtZbwopiiGFTuuiJYMFDnpkgsGaEOBnRIvtQ19vZO++lRorLhcg5UUxA/5JM0vbW6051syQu9mjAK+kQ==
 
 "@sudoo/io@^1.6.1":
   version "1.6.1"

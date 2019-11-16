@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Immutable#readme",
   "dependencies": {
-    "@sudoo/duplicate": "^1.0.7"
+    "@sudoo/duplicate": "^1.0.8"
   },
   "devDependencies": {
     "@sudoo/io": "^1.6.1",
