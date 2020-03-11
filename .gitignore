@@ -20,6 +20,9 @@ coverage
 # Build
 app
 
+# macOS
+.DS_Store
+
 # lock
 yarn.lock
 
