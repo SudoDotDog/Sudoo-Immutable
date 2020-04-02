@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Immutable#readme",
   "dependencies": {
-    "@sudoo/duplicate": "^1.1.0"
+    "@sudoo/duplicate": "^1.2.0"
   },
   "devDependencies": {
     "@sudoo/io": "^1.7.0",
-    "@sudoo/mock": "^1.2.0",
-    "@sudoo/triforce": "^2.1.0"
+    "@sudoo/mock": "^1.3.0",
+    "@sudoo/triforce": "^2.2.1"
   }
 }
