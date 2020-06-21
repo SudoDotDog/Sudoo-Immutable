@@ -9,7 +9,7 @@ import { Medium } from "./medium";
 
 export class FrozenList<E extends any> {
 
-    public static from<E extends any>(list: E[]) {
+    public static from<E extends any>(list: E[]): FrozenList<E> {
 
         return new FrozenList<E>(list);
     }

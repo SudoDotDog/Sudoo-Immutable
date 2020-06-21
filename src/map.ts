@@ -9,7 +9,7 @@ import { Medium } from "./medium";
 
 export class FrozenMap<K extends string, V extends any> {
 
-    public static from<K extends string, V extends any>(map: Record<K, V>) {
+    public static from<K extends string, V extends any>(map: Record<K, V>): FrozenMap<K, V> {
 
         return new FrozenMap<K, V>(map);
     }
@@ -43,9 +43,10 @@ export class FrozenMap<K extends string, V extends any> {
     public keys(): K[] {
 
         const result: K[] = [];
-        // tslint:disable-next-line: forin
         for (const key in this._original) {
-            result.push(key);
+            if (this._original[key]) {
+                result.push(key);
+            }
         }
         return result;
     }
