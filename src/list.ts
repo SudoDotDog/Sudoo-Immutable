@@ -43,11 +43,11 @@ export class FrozenList<E extends any> {
     public rebuild(func: (element: E, removeSymbol: symbol) => E[] | symbol): E[] {
 
         const build: E[] = [];
-        const removeSymbol: unique symbol = Symbol('remove');
+        const currentRemoveSymbol: unique symbol = Symbol('remove');
         loop: for (const element of this._original) {
 
-            const result: E[] | symbol = func(element, removeSymbol);
-            if (result === removeSymbol) {
+            const result: E[] | symbol = func(element, currentRemoveSymbol);
+            if (result === currentRemoveSymbol) {
                 continue loop;
             }
             if (!Array.isArray(result)) {
