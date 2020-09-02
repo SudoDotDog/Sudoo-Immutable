@@ -42,7 +42,7 @@ export class Medium<T> {
         const clone: T = this.clone();
         const result: T | void = func(clone);
 
-        if (result !== undefined) {
+        if (typeof result !== 'undefined') {
             return result;
         }
 
@@ -54,7 +54,7 @@ export class Medium<T> {
         const clone: T = this.clone();
         const result: T | void = await Promise.resolve(func(clone));
 
-        if (result !== undefined) {
+        if (typeof result !== 'undefined') {
             return result;
         }
 
