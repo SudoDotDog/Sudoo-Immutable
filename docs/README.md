@@ -14,3 +14,27 @@ yarn add @sudoo/immutable
 # Or
 npm install @sudoo/immutable --save
 ```
+
+## Clone Object
+
+Clone function is supported by `@sudoo/duplicated` package.
+
+```ts
+import { clone } from "@sudoo/immutable";
+
+const newObject = clone(object);
+```
+
+## Produce Object
+
+Within produce function, you can edit object immutably within mutable method.
+
+```ts
+import { produce } from "@sudoo/immutable";
+
+const newObject = produce(oldObject, (draft) => {
+    object.hello = "world";
+});
+oldObject // Not Edited
+newObject // Edited
+```
