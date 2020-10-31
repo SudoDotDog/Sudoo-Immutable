@@ -38,3 +38,21 @@ const newObject = produce(oldObject, (draft) => {
 oldObject // Not Edited
 newObject // Edited
 ```
+
+## Async Produce Object
+
+Within produce function, you can edit object immutably within mutable method.
+
+```ts
+import { produce } from "@sudoo/immutable";
+
+const newObject = await asyncProduce(oldObject, async (draft) => {
+    object.hello = await getWorld();
+});
+oldObject // Not Edited
+newObject // Edited
+```
+
+## Advanced
+
+For more advanced way to use this package, see [Immutable Medium](./medium.md) document.

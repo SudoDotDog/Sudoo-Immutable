@@ -1,6 +1,6 @@
 # Immutable Medium
 
-`produce` and `clone` function are just easier to call method, supported by `Medium` class.
+`produce`, `asyncProduce`, and `clone` function are just easier to call method, supported by `Medium` class.
 
 ## Instantiate
 
