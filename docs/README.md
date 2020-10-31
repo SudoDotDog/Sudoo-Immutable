@@ -6,3 +6,11 @@
 [![downloads](https://img.shields.io/npm/dm/@sudoo/immutable.svg)](https://www.npmjs.com/package/@sudoo/immutable)
 
 :closed_lock_with_key: Immutable for Typescript
+
+## Install
+
+```sh
+yarn add @sudoo/immutable
+# Or
+npm install @sudoo/immutable --save
+```
