@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/immutable",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": ":closed_lock_with_key: Immutable for Typescript",
   "repository": {
     "type": "git",
