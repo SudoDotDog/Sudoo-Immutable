@@ -1,6 +1,6 @@
 # Sudoo-Immutable
 
-[![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Immutable.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Immutable)
+[![Continuous Integration](https://github.com/SudoDotDog/Sudoo-Immutable/actions/workflows/ci.yml/badge.svg)](https://github.com/SudoDotDog/Sudoo-Immutable/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/SudoDotDog/Sudoo-Immutable/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Sudoo-Immutable)
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fimmutable.svg)](https://www.npmjs.com/package/@sudoo/immutable)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/immutable.svg)](https://www.npmjs.com/package/@sudoo/immutable)
