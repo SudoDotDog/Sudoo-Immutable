@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fimmutable.svg)](https://www.npmjs.com/package/@sudoo/immutable)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/immutable.svg)](https://www.npmjs.com/package/@sudoo/immutable)
 
-:closed_lock_with_key: Immutable for Typescript
+Immutable for Typescript
 
 ## Install
 
