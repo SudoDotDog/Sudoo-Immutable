@@ -16,7 +16,7 @@ export type DeepWriteable<T> = {
 export type DraftFunction<T> = ((draft: DeepWriteable<T>) => void) | ((draft: DeepWriteable<T>) => T);
 export type AsyncDraftFunction<T> = DraftFunction<T> | ((draft: DeepWriteable<T>) => Promise<void>) | ((draft: DeepWriteable<T>) => Promise<T>);
 
-export type ObjectEntry<K extends string, V extends any> = {
+export type ObjectEntry<K extends string, V> = {
 
     readonly key: K;
     readonly value: V;

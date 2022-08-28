@@ -7,9 +7,9 @@
 import { DraftFunction } from "./declare";
 import { Medium } from "./medium";
 
-export class FrozenList<E extends any> {
+export class FrozenList<E> {
 
-    public static from<E extends any>(list: E[]): FrozenList<E> {
+    public static from<E>(list: E[]): FrozenList<E> {
 
         return new FrozenList<E>(list);
     }

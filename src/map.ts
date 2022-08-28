@@ -7,9 +7,9 @@
 import { DraftFunction, ObjectEntry } from "./declare";
 import { Medium } from "./medium";
 
-export class FrozenMap<K extends string, V extends any> {
+export class FrozenMap<K extends string, V> {
 
-    public static from<K extends string, V extends any>(map: Record<K, V>): FrozenMap<K, V> {
+    public static from<K extends string, V>(map: Record<K, V>): FrozenMap<K, V> {
 
         return new FrozenMap<K, V>(map);
     }
